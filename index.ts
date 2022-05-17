@@ -1,6 +1,8 @@
 import { Point } from "./src/point";
 import { addNumbers } from "./src/addNumbers";
-import { person } from "./src/basics";
+import { License, person } from "./src/basics";
+import { combine, User } from "./src/unionTypes";
+import { add, addAndHandle, addValues, printResult } from "./src/functions";
 
 // // ---- Mosh ----
 // const point = new Point(6, 3);
@@ -33,3 +35,38 @@ import { person } from "./src/basics";
 // for (const hobby of person.hobbies) {
 //   console.log(hobby.toUpperCase());
 // }
+
+// // Tuple
+// person.role[1] = "Editor";
+// person.role.push("Player"); // Push it's an exception
+// console.log(person);
+
+// // Enum
+// person.license = License.ADMIN;
+// console.log(person);
+
+// // Union Types
+// const combinedAges = combine(20, 7);
+// console.log(combinedAges);
+//
+// const combinedNames = combine("Rei", "Orozco");
+// console.log(combinedNames);
+
+// Literal Types
+const combinedAges = combine(20, 7, "as-number");
+console.log(combinedAges);
+
+const combinedStringAges = combine("20", "7", "as-number");
+console.log(combinedStringAges);
+
+const combinedNames = combine("Rei", "Orozco", "as-string");
+console.log(combinedNames);
+
+// Type Aliases & Object Types
+const u1: User = { name: "Max", age: 30 }; // this works!
+console.log(u1);
+
+// Function return Types & "void"
+printResult(add(15, 6));
+console.log(addValues(8, 8));
+addAndHandle(9, 9, (result) => console.log(result));
