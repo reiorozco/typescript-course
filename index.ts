@@ -3,6 +3,7 @@ import { addNumbers } from "./src/addNumbers";
 import { License, person } from "./src/basics";
 import { combine, User } from "./src/unionTypes";
 import { add, addAndHandle, addValues, printResult } from "./src/functions";
+import { Department, ITDepartment } from "./src/class";
 
 // // ---- Mosh ----
 // const point = new Point(6, 3);
@@ -52,21 +53,40 @@ import { add, addAndHandle, addValues, printResult } from "./src/functions";
 // const combinedNames = combine("Rei", "Orozco");
 // console.log(combinedNames);
 
-// Literal Types
-const combinedAges = combine(20, 7, "as-number");
-console.log(combinedAges);
+// // Literal Types
+// const combinedAges = combine(20, 7, "as-number");
+// console.log(combinedAges);
+//
+// const combinedStringAges = combine("20", "7", "as-number");
+// console.log(combinedStringAges);
+//
+// const combinedNames = combine("Rei", "Orozco", "as-string");
+// console.log(combinedNames);
+//
+// // Type Aliases & Object Types
+// const u1: User = { name: "Max", age: 30 }; // this works!
+// console.log(u1);
+//
+// // Function return Types & "void"
+// printResult(add(15, 6));
+// console.log(addValues(8, 8));
+// addAndHandle(9, 9, (result) => console.log(result));
 
-const combinedStringAges = combine("20", "7", "as-number");
-console.log(combinedStringAges);
+// Classes & Interfaces
+const machineLearning = new ITDepartment("D001", "Rei Orozco");
+machineLearning.describe();
+machineLearning.addEmployee("Rei");
+machineLearning.addEmployee("Pablo");
+machineLearning.addEmployee("Fabio");
+machineLearning.addEmployee("Neri");
+machineLearning.listEmployees();
+console.log(machineLearning);
 
-const combinedNames = combine("Rei", "Orozco", "as-string");
-console.log(combinedNames);
-
-// Type Aliases & Object Types
-const u1: User = { name: "Max", age: 30 }; // this works!
-console.log(u1);
-
-// Function return Types & "void"
-printResult(add(15, 6));
-console.log(addValues(8, 8));
-addAndHandle(9, 9, (result) => console.log(result));
+const point = new Point(23, 34);
+point.draw();
+console.log(point.x);
+point.x = 15;
+console.log(point.x);
+console.log(point);
+// Static method
+console.log(Point.difference(34, 89));
