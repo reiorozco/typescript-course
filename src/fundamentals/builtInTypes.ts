@@ -3,6 +3,7 @@ let course = "TypeScript";
 let is_published = true;
 let level;
 
+// # Any
 function render(document: any) {
   console.log(document);
 }
@@ -32,3 +33,18 @@ enum OtherSizes {
 }
 
 let mySize: OtherSizes = OtherSizes.Medium;
+
+// # Functions
+
+function calculateTax(
+  income: number,
+  taxYear = 2022,
+  optional?: string
+): number {
+  console.log("Optional parameter", optional);
+  if (taxYear < 2022) return income * 1.2;
+
+  return income * 1.3;
+}
+
+calculateTax(10_000, 2022);
