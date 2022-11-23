@@ -4,7 +4,7 @@ let is_published = true;
 let level;
 
 // # Any
-function render(document: any) {
+function renderDocument(document: any) {
   console.log(document);
 }
 
