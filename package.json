@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "typescript-course",
   "version": "1.0.0",
   "description": "Practice TS",
   "main": "./dist/index.js",
