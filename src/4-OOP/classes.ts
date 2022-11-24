@@ -74,6 +74,6 @@ ride1.start();
 let ride2 = new Ride();
 ride2.start();
 let ride3 = new Ride();
-ride3.start();
+ride3.stop();
 
 console.log("activeRides", Ride.activeRides);
