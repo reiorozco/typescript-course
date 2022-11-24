@@ -37,3 +37,17 @@ account.balance = 2000; // set Balance(Getters and Setters)
 console.log("get Balance", account.balance);
 console.log("typeof", typeof account);
 console.log("instanceof", account instanceof Account);
+
+class SeatAssignment {
+  // A1, A2...
+  // Mosh, John...
+  // Index signature property
+  [seatNumber: string]: string;
+}
+
+export let seats = new SeatAssignment();
+seats.A1 = "Mosh";
+seats["A2"] = "Rei";
+seats.A3 = "Jon";
+
+console.log("seats.A2", seats.A2);
