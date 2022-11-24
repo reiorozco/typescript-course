@@ -37,3 +37,25 @@ class Teacher extends Person {
 let teacher = new Teacher("Mosh", "Hamed-ani");
 
 console.log("Teacher fullName", teacher.fullName);
+
+// # Polymorphism
+
+class Principal extends Person {
+  override get fullName() {
+    return `Principal ${super.fullName}`;
+  }
+}
+
+function printNames(people: Person[]) {
+  for (let person of people) {
+    console.log(person.fullName);
+  }
+}
+
+console.log("printNames");
+printNames([
+  new Principal("Silvia", "Gomez"),
+  teacher,
+  student,
+  new Student(2, "Fabio", "Cari"),
+]);
