@@ -25,3 +25,15 @@ export let student = new Student(1, "Rei", "Orozco");
 console.log("fullName", student.fullName);
 student.walk();
 student.takeTest();
+
+// # Overriding
+
+class Teacher extends Person {
+  override get fullName() {
+    return `Profesor ${super.fullName}`;
+  }
+}
+
+let teacher = new Teacher("Mosh", "Hamed-ani");
+
+console.log("Teacher fullName", teacher.fullName);
