@@ -1,14 +1,11 @@
 class Account {
-  readonly id: number;
-  owner: string;
-  private _balance: number;
   nickname?: string;
 
-  constructor(id: number, owner: string, balance: number) {
-    this.id = id;
-    this.owner = owner;
-    this._balance = balance;
-  }
+  constructor(
+    public readonly id: number,
+    public owner: string,
+    private _balance: number
+  ) {}
 
   deposit(amount: number): void {
     if (amount <= 0) {
@@ -19,7 +16,7 @@ class Account {
     this._balance += amount;
   }
 
-  private calculateTax() {}
+  // private calculateTax() {}
 
   getBalance() {
     return this._balance;
@@ -28,6 +25,7 @@ class Account {
 
 export let account = new Account(1, "Rei", 2500);
 account.deposit(500);
+
 console.log("getBalance", account.getBalance());
 console.log("typeof", typeof account);
 console.log("instanceof", account instanceof Account);
