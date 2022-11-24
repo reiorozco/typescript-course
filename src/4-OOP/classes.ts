@@ -1,7 +1,8 @@
 class Account {
-  id: number;
+  readonly id: number;
   owner: string;
   balance: number;
+  nickname?: string;
 
   constructor(id: number, owner: string, balance: number) {
     this.id = id;
@@ -17,3 +18,9 @@ class Account {
     this.balance += amount;
   }
 }
+
+export let account = new Account(1, "Rei", 2500);
+account.deposit(500);
+console.log(account.balance);
+console.log("typeof", typeof account);
+console.log("instanceof", account instanceof Account);

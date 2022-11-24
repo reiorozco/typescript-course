@@ -4,9 +4,9 @@ function render(document: unknown) {
     console.log(document.toLowerCase());
   }
 
-  document.move();
-  document.fly();
-  document.whateverWeWant();
+  // document.move();
+  // document.fly();
+  // document.whateverWeWant();
 }
 
 // # Never Type
@@ -21,5 +21,5 @@ function processEvents(): never {
 }
 
 reject("...");
-processEvents();
-console.log("Hello World");
+// processEvents();
+// console.log("Hello World");
