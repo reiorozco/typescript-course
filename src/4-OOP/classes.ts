@@ -51,3 +51,29 @@ seats["A2"] = "Rei";
 seats.A3 = "Jon";
 
 console.log("seats.A2", seats.A2);
+
+// # Static Members
+
+class Ride {
+  private static _activeRides: number = 0;
+
+  start() {
+    Ride._activeRides++;
+  }
+  stop() {
+    Ride._activeRides--;
+  }
+
+  static get activeRides() {
+    return Ride._activeRides;
+  }
+}
+
+let ride1 = new Ride();
+ride1.start();
+let ride2 = new Ride();
+ride2.start();
+let ride3 = new Ride();
+ride3.start();
+
+console.log("activeRides", Ride.activeRides);
