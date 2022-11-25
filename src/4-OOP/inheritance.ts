@@ -59,3 +59,21 @@ printNames([
   student,
   new Student(2, "Fabio", "Cari"),
 ]);
+
+// # Abstract Classes and Methods
+
+abstract class Shape {
+  protected constructor(public color: string) {}
+
+  abstract render(): void;
+}
+
+class Circle extends Shape {
+  constructor(public radio: number, color: string) {
+    super(color);
+  }
+
+  override render(): void {
+    console.log("Rendering a circle.");
+  }
+}
