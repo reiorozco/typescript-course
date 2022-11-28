@@ -22,9 +22,24 @@ interface Person {
 }
 
 interface Product {
-  serial: number;
+  name: string;
+  price: number;
 }
 
 let result = fetch<Product>("url");
 
-let serial = result.data?.serial;
+let serial = result.data?.name;
+
+// # Constraints (Restricciones)
+
+class Animal {
+  constructor(public name: string) {}
+}
+
+class Aquatic extends Animal {}
+
+function echo<T extends Person>(value: T): T {
+  return value;
+}
+
+let echo1 = echo(new Aquatic("Fish"));
