@@ -50,6 +50,7 @@ class CompressibleStore<T> extends Store<T> {
 
 // Restrict the generic type parameter
 class SearchableStore<T extends { name: string }> extends Store<T> {
+  // @ts-ignore
   override find(name: string): T | undefined {
     return this._objects.find((obj) => obj.name === name);
   }
