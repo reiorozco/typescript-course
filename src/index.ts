@@ -5,7 +5,7 @@ import { profileComponent } from "./6-decorators/class-decorators";
 
 // console.log(age);
 
-console.log(account);
-console.log(seats);
-console.log(student);
+// console.log(account);
+// console.log(seats);
+// console.log(student);
 console.log(profileComponent);
