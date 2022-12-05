@@ -13,5 +13,12 @@ function Component(options: ComponentOptions) {
   };
 }
 
+function Pipe(constructor: Function) {
+  console.log("Pipe decorator called");
+  constructor.prototype.pipe = true;
+}
+
 @Component({ selector: "#my-selector" })
+@Pipe
+// called decorators in reverse, f(g(x))
 export class ProfileComponent {}
