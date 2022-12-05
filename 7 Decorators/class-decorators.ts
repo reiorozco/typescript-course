@@ -20,5 +20,6 @@ function Pipe(constructor: Function) {
 
 @Component({ selector: "#my-selector" })
 @Pipe
-// called decorators in reverse, f(g(x))
+// Multiple decorators are applied in reverse order.
+// Pipe followed by Component.  f(g(x))
 export class ProfileComponent {}
