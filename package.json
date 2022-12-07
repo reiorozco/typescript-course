@@ -10,7 +10,11 @@
   "author": "Rei Orozco",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.191",
     "prettier": "^2.8.0",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
